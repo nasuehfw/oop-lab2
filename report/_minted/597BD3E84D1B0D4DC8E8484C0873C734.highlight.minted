@@ -1,0 +1,35 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+cm}{/*}
+\PYG{c+cm}{ * Copyright (c) 2026. Anastasiia Gorbunova}
+\PYG{c+cm}{ * National University \PYGZdq{}Odesa Polytechnic\PYGZdq{}}
+\PYG{c+cm}{ *}
+\PYG{c+cm}{ * Licensed under the Apache License, Version 2.0 (the \PYGZdq{}License\PYGZdq{});}
+\PYG{c+cm}{ * you may not use this file except in compliance with the License.}
+\PYG{c+cm}{ * You may obtain a copy of the License at}
+\PYG{c+cm}{ *}
+\PYG{c+cm}{ *     http://apache.org}
+\PYG{c+cm}{ */}
+\PYG{k+kn}{package}\PYG{+w}{ }\PYG{n+nn}{ad251.gorbunova}\PYG{p}{;}
+
+\PYG{c+cm}{/**}
+\PYG{c+cm}{ * Інтерфейс кошика товарів. Визначає загальнодоступний контракт (API)}
+\PYG{c+cm}{ * для будь\PYGZhy{}якої внутрішньої структури даних зберігання.}
+\PYG{c+cm}{ */}
+\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{interface} \PYG{n+nc}{Cart}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+cm}{/** Додавання товару до кошика */}
+\PYG{+w}{    }\PYG{k+kt}{boolean}\PYG{+w}{ }\PYG{n+nf}{addItem}\PYG{p}{(}\PYG{n}{Item}\PYG{+w}{ }\PYG{n}{item}\PYG{p}{);}
+\PYG{+w}{    }
+\PYG{+w}{    }\PYG{c+cm}{/** Видалення останнього доданого товару з кошика */}
+\PYG{+w}{    }\PYG{n}{Item}\PYG{+w}{ }\PYG{n+nf}{deleteItem}\PYG{p}{();}
+\PYG{+w}{    }
+\PYG{+w}{    }\PYG{c+cm}{/** Підрахунок суми цін усіх товарів у кошику */}
+\PYG{+w}{    }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n+nf}{calculateTotalSum}\PYG{p}{();}
+\PYG{+w}{    }
+\PYG{+w}{    }\PYG{c+cm}{/** Підвищення ціни всіх товарів у кошику на відсоток */}
+\PYG{+w}{    }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{raiseAllPrices}\PYG{p}{(}\PYG{k+kt}{float}\PYG{+w}{ }\PYG{n}{percent}\PYG{p}{);}
+\PYG{+w}{    }
+\PYG{+w}{    }\PYG{c+cm}{/** Зниження ціни всіх товарів у кошику на відсоток */}
+\PYG{+w}{    }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{cutAllPrices}\PYG{p}{(}\PYG{k+kt}{float}\PYG{+w}{ }\PYG{n}{percent}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\end{MintedVerbatim}

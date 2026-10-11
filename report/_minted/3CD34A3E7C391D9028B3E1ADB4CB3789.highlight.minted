@@ -1,0 +1,78 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+cm}{/*}
+\PYG{c+cm}{ * Copyright (c) 2026 Anastasiia Gorbunova}
+\PYG{c+cm}{ * National University \PYGZdq{}Odesa Polytechnic\PYGZdq{}}
+\PYG{c+cm}{ * }
+\PYG{c+cm}{ * Licensed under the Apache License, Version 2.0 (the \PYGZdq{}License\PYGZdq{});}
+\PYG{c+cm}{ * you may not use this file except in compliance with the License.}
+\PYG{c+cm}{ * You may obtain a copy of the License at}
+\PYG{c+cm}{ *}
+\PYG{c+cm}{ *     http://apache.org}
+\PYG{c+cm}{ *}
+\PYG{c+cm}{ * Unless required by applicable law or agreed to in writing, software}
+\PYG{c+cm}{ * distributed under the License is distributed on an \PYGZdq{}AS IS\PYGZdq{} BASIS,}
+\PYG{c+cm}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}
+\PYG{c+cm}{ * See the License for the specific language governing permissions and}
+\PYG{c+cm}{ * limitations under the License.}
+\PYG{c+cm}{ */}
+\PYG{k+kn}{package}\PYG{+w}{ }\PYG{n+nn}{ad251.gorbunova}\PYG{p}{;}
+
+\PYG{c+cm}{/**}
+\PYG{c+cm}{ * Головний керуючий клас програми (Точка входу).}
+\PYG{c+cm}{ * Координує створення об\PYGZsq{}єктів\PYGZhy{}компонентів та демонстрацію виконання завдань}
+\PYG{c+cm}{ * лабораторної роботи №2.*.}
+\PYG{c+cm}{ * }
+\PYG{c+cm}{ * @author Анастасія Горбунова}
+\PYG{c+cm}{ * @version 1.0 09 Oct 2026}
+\PYG{c+cm}{ */}
+\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{Main}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{static}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{(}\PYG{n}{String}\PYG{o}{[]}\PYG{+w}{ }\PYG{n}{args}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}=== Лабораторна робота №2 ===\PYGZbs{}n\PYGZbs{}n\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Тема: Основи роботи з класами та об\PYGZsq{}єктами.\PYGZbs{}n\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Інкапсуляція. \PYGZbs{}n\PYGZdq{}}\PYG{p}{);}\PYG{+w}{                       }
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Модифікатори доступу.\PYGZbs{}n\PYGZbs{}n\PYGZdq{}}\PYG{p}{);}\PYG{+w}{                     }
+
+\PYG{+w}{        }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}\PYGZhy{} 1. Традиційне виконання на базі Стека (LIFO) \PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZhy{}\PYGZhy{}\PYGZhy{} Тестування Кошика на базі СТЕКА (LIFO) \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZbs{}n\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{Cart}\PYG{+w}{ }\PYG{n}{stackCart}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{StackCart}\PYG{p}{(}\PYG{l+m+mi}{8}\PYG{p}{);}\PYG{+w}{ }\PYG{c+cm}{/* Створення через інтерферс контракт */}
+
+\PYG{+w}{        }\PYG{c+c1}{// Заповнення 5\PYGZhy{}6 об\PYGZsq{}єктами}
+\PYG{+w}{        }\PYG{n}{stackCart}\PYG{p}{.}\PYG{n+na}{addItem}\PYG{p}{(}\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Item}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Ноутбук\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{25000.0f}\PYG{p}{));}
+\PYG{+w}{        }\PYG{n}{stackCart}\PYG{p}{.}\PYG{n+na}{addItem}\PYG{p}{(}\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Item}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Мишка\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{600.0f}\PYG{p}{));}
+\PYG{+w}{        }\PYG{n}{stackCart}\PYG{p}{.}\PYG{n+na}{addItem}\PYG{p}{(}\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Item}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Клавіатура\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1500.0f}\PYG{p}{));}
+\PYG{+w}{        }\PYG{n}{stackCart}\PYG{p}{.}\PYG{n+na}{addItem}\PYG{p}{(}\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Item}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Монітор\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{7000.0f}\PYG{p}{));}
+\PYG{+w}{        }\PYG{n}{stackCart}\PYG{p}{.}\PYG{n+na}{addItem}\PYG{p}{(}\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Item}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Навушники\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{2200.0f}\PYG{p}{));}
+
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Початкова сума товарів у стеку: \PYGZpc{}.2f грн\PYGZbs{}n\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{stackCart}\PYG{p}{.}\PYG{n+na}{calculateTotalSum}\PYG{p}{());}
+
+\PYG{+w}{        }\PYG{c+c1}{// Підняття цін на 15\PYGZpc{}}
+\PYG{+w}{        }\PYG{n}{stackCart}\PYG{p}{.}\PYG{n+na}{raiseAllPrices}\PYG{p}{(}\PYG{l+m+mf}{15.0f}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Сума після підвищення цін на 15\PYGZpc{}\PYGZpc{}: \PYGZpc{}.2f грн\PYGZbs{}n\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{stackCart}\PYG{p}{.}\PYG{n+na}{calculateTotalSum}\PYG{p}{());}
+
+\PYG{+w}{        }\PYG{c+c1}{// Зниження цін на 30\PYGZpc{}}
+\PYG{+w}{        }\PYG{n}{stackCart}\PYG{p}{.}\PYG{n+na}{cutAllPrices}\PYG{p}{(}\PYG{l+m+mf}{30.0f}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Сума після зниження цін на 30\PYGZpc{}\PYGZpc{}: \PYGZpc{}.2f грн\PYGZbs{}n\PYGZbs{}n\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{stackCart}\PYG{p}{.}\PYG{n+na}{calculateTotalSum}\PYG{p}{());}
+
+
+\PYG{+w}{        }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}\PYGZhy{} 2. Пункт 4: Зміна внутрішньої структури на Чергу (FIFO) \PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZhy{}\PYGZhy{}\PYGZhy{} Тестування Кошика на базі ЧЕРГИ (FIFO) \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZbs{}n\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{Cart}\PYG{+w}{ }\PYG{n}{queueCart}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{QueueCart}\PYG{p}{(}\PYG{l+m+mi}{8}\PYG{p}{);}\PYG{+w}{ }\PYG{c+cm}{/* Інтерфейс ТОЙ САМИЙ, логіка інша */}
+
+\PYG{+w}{        }\PYG{n}{queueCart}\PYG{p}{.}\PYG{n+na}{addItem}\PYG{p}{(}\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Item}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Ноутбук\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{25000.0f}\PYG{p}{));}
+\PYG{+w}{        }\PYG{n}{queueCart}\PYG{p}{.}\PYG{n+na}{addItem}\PYG{p}{(}\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Item}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Мишка\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{600.0f}\PYG{p}{));}
+\PYG{+w}{        }\PYG{n}{queueCart}\PYG{p}{.}\PYG{n+na}{addItem}\PYG{p}{(}\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Item}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Клавіатура\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1500.0f}\PYG{p}{));}
+
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Початкова сума у черзі: \PYGZpc{}.2f грн\PYGZbs{}n\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{queueCart}\PYG{p}{.}\PYG{n+na}{calculateTotalSum}\PYG{p}{());}
+\PYG{+w}{        }\PYG{n}{queueCart}\PYG{p}{.}\PYG{n+na}{raiseAllPrices}\PYG{p}{(}\PYG{l+m+mf}{15.0f}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Сума у черзі після підвищення на 15\PYGZpc{}\PYGZpc{}: \PYGZpc{}.2f грн\PYGZbs{}n\PYGZbs{}n\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{queueCart}\PYG{p}{.}\PYG{n+na}{calculateTotalSum}\PYG{p}{());}
+
+
+\PYG{+w}{        }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}\PYGZhy{} 3. ЗАДАННЯ з файлу lab2\PYGZhy{}2.docx: Варіант №7 (Облік товарів на складі) \PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZhy{}\PYGZhy{}\PYGZhy{} Індивідуальне завдання (Варіант №7) \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZbs{}n\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{WarehouseManager}\PYG{p}{.}\PYG{n+na}{analyzeWarehouse}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{);}\PYG{+w}{ }\PYG{c+cm}{/* Передаємо мінімальний ліміт 10 одиниць */}
+\PYG{+w}{ }
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

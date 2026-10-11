@@ -1,0 +1,13 @@
+# --- Java ---
+bin/
+*.class
+
+# --- VS Code ---
+.vscode/
+
+# --- LaTeX (XeLaTeX) ---
+*.aux
+*.log
+*.toc
+*.synctex.gz
+report/_minted-*
